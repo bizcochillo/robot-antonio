@@ -1,5 +1,7 @@
 from flask import Flask
 from flask_socketio import SocketIO
+import commands
+import json
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -22,4 +24,13 @@ def test_disconnect():
     print('---- User disconnected ----')
 
 if __name__ == '__main__':
+    server =  commands.getoutput('hostname -I')
+    with open("./static/config.json", "r") as jsonFile:
+        data = json.load(jsonFile)
+
+    data["server"] = server.strip()
+
+    with open("./static/config.json", "w") as jsonFile:
+        json.dump(data, jsonFile)
+    
     socketio.run(app, host='0.0.0.0')
