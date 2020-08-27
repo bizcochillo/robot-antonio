@@ -37,5 +37,5 @@ if __name__ == '__main__':
 
     with open("./static/config.json", "w") as jsonFile:
         json.dump(data, jsonFile)
-    
+    print("Endpoint: http://" + server + ":5000/static/index.html")
     socketio.run(app, host='0.0.0.0')
