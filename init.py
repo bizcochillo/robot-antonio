@@ -1,6 +1,12 @@
 from flask import Flask
 from flask_socketio import SocketIO
-import commands
+
+try:
+    import commands 
+    server = commands.getoutput('hostname -I')
+except ImportError:
+    server = "127.0.0.1"
+
 import json
 
 app = Flask(__name__)
@@ -23,8 +29,7 @@ def test_connect():
 def test_disconnect():
     print('---- User disconnected ----')
 
-if __name__ == '__main__':
-    server =  commands.getoutput('hostname -I')
+if __name__ == '__main__':    
     with open("./static/config.json", "r") as jsonFile:
         data = json.load(jsonFile)
 
