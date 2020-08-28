@@ -12,7 +12,7 @@ class Robot:
         self.GPIO.setup(18, GPIO.OUT)
         #D-B Derecha para atras
         self.GPIO.setup(22, GPIO.OUT)
-        #Derecha para adelante
+        #D-F
         self.GPIO.setup(23, GPIO.OUT)
 
 
@@ -23,7 +23,7 @@ class Robot:
         self.GPIO.output(23, True)
 
 
-    def back(self):
+    def down(self):
         self.GPIO.output(17, True)
         self.GPIO.output(18, False)
         self.GPIO.output(22, True)
