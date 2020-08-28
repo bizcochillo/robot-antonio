@@ -22,36 +22,36 @@ class Robot:
 
 
     def up(self):
-        self.GPIO.output(MOVE_LEFT_AHEAD, True)
-        self.GPIO.output(MOVE_LEFT_BACK, False)
-        self.GPIO.output(MOVE_RIGHT_AHEAD, True)
-        self.GPIO.output(MOVE_RIGHT_BACK, False)
-
-
-    def down(self):
-        self.GPIO.output(MOVE_LEFT_AHEAD, False)
-        self.GPIO.output(MOVE_LEFT_BACK, True)
-        self.GPIO.output(MOVE_RIGHT_AHEAD, False)
-        self.GPIO.output(MOVE_RIGHT_BACK, True)
-
-    def left(self):
-        self.GPIO.output(MOVE_LEFT_AHEAD, False)
-        self.GPIO.output(MOVE_LEFT_BACK, False)
-        self.GPIO.output(MOVE_RIGHT_AHEAD, True)
-        self.GPIO.output(MOVE_RIGHT_BACK, False)
-
-    def right(self):
-        self.GPIO.output(MOVE_LEFT_AHEAD, True)
-        self.GPIO.output(MOVE_LEFT_BACK, False)
-        self.GPIO.output(MOVE_RIGHT_AHEAD, False)
-        self.GPIO.output(MOVE_RIGHT_BACK, False)
+        self.GPIO.output(Robot.MOVE_LEFT_AHEAD, True)
+        self.GPIO.output(Robot.MOVE_LEFT_BACK, False)
+        self.GPIO.output(Robot.MOVE_RIGHT_AHEAD, True)
+        self.GPIO.output(Robot.MOVE_RIGHT_BACK, False)
+Robot.
+Robot.
+    def down(self):Robot.
+        self.GPIO.output(Robot.MOVE_LEFT_AHEAD, False)
+        self.GPIO.output(Robot.MOVE_LEFT_BACK, True)
+        self.GPIO.output(Robot.MOVE_RIGHT_AHEAD, False)
+        self.GPIO.output(Robot.MOVE_RIGHT_BACK, True)
+Robot.
+    def left(self):Robot.
+        self.GPIO.output(Robot.MOVE_LEFT_AHEAD, False)
+        self.GPIO.output(Robot.MOVE_LEFT_BACK, False)
+        self.GPIO.output(Robot.MOVE_RIGHT_AHEAD, True)
+        self.GPIO.output(Robot.MOVE_RIGHT_BACK, False)
+Robot.
+    def right(self):Robot.
+        self.GPIO.output(Robot.MOVE_LEFT_AHEAD, True)
+        self.GPIO.output(Robot.MOVE_LEFT_BACK, False)
+        self.GPIO.output(Robot.MOVE_RIGHT_AHEAD, False)
+        self.GPIO.output(Robot.MOVE_RIGHT_BACK, False)
 
 
     def stop(self):
-        self.GPIO.output(MOVE_LEFT_AHEAD, False)
-        self.GPIO.output(MOVE_LEFT_BACK, False)
-        self.GPIO.output(MOVE_RIGHT_AHEAD, False)
-        self.GPIO.output(MOVE_RIGHT_BACK, False)
+        self.GPIO.output(Robot.MOVE_LEFT_AHEAD, False)
+        self.GPIO.output(Robot.MOVE_LEFT_BACK, False)
+        self.GPIO.output(Robot.MOVE_RIGHT_AHEAD, False)
+        self.GPIO.output(Robot.MOVE_RIGHT_BACK, False)
     def getch(self):
         import sys, tty, termios
         old_settings = termios.tcgetattr(0)
