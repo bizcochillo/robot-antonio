@@ -1,8 +1,8 @@
 class Robot:
-    MOVE_LEFT_AHEAD = 17
+    MOVE_LEFT_AHEAD = 22
     MOVE_LEFT_BACK = 23
     MOVE_RIGHT_AHEAD = 18 
-    MOVE_RIGHT_BACK = 22 
+    MOVE_RIGHT_BACK = 17 
 
     def __init__(self):
         try:
@@ -50,7 +50,7 @@ class Robot:
         self.GPIO.output(Robot.MOVE_LEFT_BACK, False)
         self.GPIO.output(Robot.MOVE_RIGHT_AHEAD, False)
         self.GPIO.output(Robot.MOVE_RIGHT_BACK, False)
-        
+
     def getch(self):
         import sys, tty, termios
         old_settings = termios.tcgetattr(0)
