@@ -59,6 +59,7 @@ class Robot:
             termios.tcsetattr(0, termios.TCSANOW, old_settings)
         return ch
     def action(self, order):
+        print("Robot> " + order)
         method = getattr(self, order, lambda:'Invalid')
         return method()
 
