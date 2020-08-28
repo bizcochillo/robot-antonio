@@ -26,20 +26,19 @@ class Robot:
         self.GPIO.output(Robot.MOVE_LEFT_BACK, False)
         self.GPIO.output(Robot.MOVE_RIGHT_AHEAD, True)
         self.GPIO.output(Robot.MOVE_RIGHT_BACK, False)
-Robot.
-Robot.
+
     def down(self):Robot.
         self.GPIO.output(Robot.MOVE_LEFT_AHEAD, False)
         self.GPIO.output(Robot.MOVE_LEFT_BACK, True)
         self.GPIO.output(Robot.MOVE_RIGHT_AHEAD, False)
         self.GPIO.output(Robot.MOVE_RIGHT_BACK, True)
-Robot.
+
     def left(self):Robot.
         self.GPIO.output(Robot.MOVE_LEFT_AHEAD, False)
         self.GPIO.output(Robot.MOVE_LEFT_BACK, False)
         self.GPIO.output(Robot.MOVE_RIGHT_AHEAD, True)
         self.GPIO.output(Robot.MOVE_RIGHT_BACK, False)
-Robot.
+
     def right(self):Robot.
         self.GPIO.output(Robot.MOVE_LEFT_AHEAD, True)
         self.GPIO.output(Robot.MOVE_LEFT_BACK, False)
