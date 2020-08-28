@@ -16,33 +16,33 @@ class Robot:
         self.GPIO.setup(23, GPIO.OUT)
 
 
-    def adelante(self):
+    def up(self):
         self.GPIO.output(17, False)
         self.GPIO.output(18, True)
         self.GPIO.output(22, False)
         self.GPIO.output(23, True)
 
 
-    def atras(self):
+    def back(self):
         self.GPIO.output(17, True)
         self.GPIO.output(18, False)
         self.GPIO.output(22, True)
         self.GPIO.output(23, False)
 
-    def izquierda(self):
+    def left(self):
         self.GPIO.output(17, False)
         self.GPIO.output(18, True)
         self.GPIO.output(22, False)
         self.GPIO.output(23, False)
 
-    def derecha(self):
+    def right(self):
         self.GPIO.output(17, False)
         self.GPIO.output(18, False)
         self.GPIO.output(22, False)
         self.GPIO.output(23, True)
 
 
-    def parar(self):
+    def stop(self):
         self.GPIO.output(17, False)
         self.GPIO.output(18, False)
         self.GPIO.output(22, False)
