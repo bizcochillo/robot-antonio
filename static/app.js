@@ -73,7 +73,20 @@ function sendNewOrder(o) {
 function connectToSocket(server) {
     socket = io.connect('http://' + server + ':5000', { 'forceNew': true });
 
-    socket.on('message', function(data) {
-        console.log("Received from server> " + data);
+    socket.on('message', function(received) {
+        $("robot_status")
+        console.log("Received from server>");
+        if (received.data == "Connected") {
+            $("#robot_status").removeClass("status-offline")
+            $("#robot_status").addClass("status-online")
+            $("#robot_status").text("online");
+        }
     });
+
+    socket.onerror = function(event) {
+        $("#robot_status").removeClass("status-online")
+        $("#robot_status").addClass("status-offline")
+        $("#robot_status").text("offline");
+    };
+
 }

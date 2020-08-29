@@ -74,7 +74,7 @@ class RobotFake(Robot):
     def up(self):
         print("Robot> UP")
 
-    def back(self):
+    def down(self):
         print("Robot> BACK")
 
     def left(self):
