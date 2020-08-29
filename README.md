@@ -1,13 +1,4 @@
-Joystick JavaScript based on http://jeromeetienne.github.io/virtualjoystick.js/examples/basic.html
-python WebSocket library based on flask 
-DC Motor connection on http://www.penguintutor.com/electronics/dcmotor-control
+Python Server (Flask with SocketIO) and JavaScript client based on VirtualJoystick (credits to https://github.com/jeromeetienne/virtualjoystick.js) and jQuery. 
+Chassis (credits to  http://www.penguintutor.com/electronics/dcmotor-control) with two engines managed by a python server running on a Raspberry PI. 
 
-Troubleshooting
-- Adelante 
- DERECHA ADELANTE
-- Izquierda
- DERECHA ADELANTE
-- Derecha
- IZQUIERDA ATRÁS
-- Atrás
- IZQUIERDA ADELANTE
+The server raises and endpoint on http://server_address:5000/static/index.html which is JS based. The JS client collects motion orders by providing a JS joystick  and sends them to the server via a WebSocket channel.
