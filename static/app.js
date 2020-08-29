@@ -74,9 +74,6 @@ function connectToSocket(server) {
     socket = io.connect('http://' + server + ':5000', { 'forceNew': true });
 
     socket.on('message', function(data) {
-        console.log('JavaScript client connected');
-        console.log(data);
+        console.log("Received from server> " + data);
     });
-
-    socket.send('message', "information from JavaScript");
 }
