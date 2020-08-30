@@ -3,7 +3,6 @@ let socket;
 
 $(document).ready(function() {
     $.getJSON('config.json', function(data) {
-        //HERE YOu need to get the name server
         return data.server;
     }).done(data => connectToSocket(data.server));
 
@@ -28,7 +27,6 @@ $(document).ready(function() {
         console.log('stop listening');
     });
 
-
     setInterval(function() {
         if (!isListening) return; // not listening for events. 
         let deltaX = joystick.deltaX();
@@ -50,14 +48,6 @@ $(document).ready(function() {
             lastOrder = order;
         }
 
-        var outputEl = document.getElementById('result');
-        outputEl.innerHTML = '<b>Result:</b> ' +
-            ' dx:' + joystick.deltaX() +
-            ' dy:' + joystick.deltaY() +
-            (joystick.right() ? ' right' : '') +
-            (joystick.up() ? ' up' : '') +
-            (joystick.left() ? ' left' : '') +
-            (joystick.down() ? ' down' : '')
     }, 1 / 30 * 1000);
 });
 
