@@ -5,6 +5,10 @@ body {
     background-color: #BBB;
 }
 
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #info {
     position: absolute;
     top: 0px;
