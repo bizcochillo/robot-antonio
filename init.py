@@ -22,14 +22,14 @@ class Robot:
 
 
     def up(self):
-        self.GPIO.output(Robot.MOVE_LEFT_AHEAD, True)
-        self.GPIO.output(Robot.MOVE_LEFT_BACK, False)
-        self.GPIO.output(Robot.MOVE_RIGHT_AHEAD, True)
+        self.GPIO.output(Robot.MOVE_RIGHT_AHEAD, True)        
+        self.GPIO.output(Robot.MOVE_LEFT_BACK, False)        
         self.GPIO.output(Robot.MOVE_RIGHT_BACK, False)
+        self.GPIO.output(Robot.MOVE_LEFT_AHEAD, True)
 
     def down(self):
-        self.GPIO.output(Robot.MOVE_LEFT_AHEAD, False)
         self.GPIO.output(Robot.MOVE_LEFT_BACK, True)
+        self.GPIO.output(Robot.MOVE_LEFT_AHEAD, False)        
         self.GPIO.output(Robot.MOVE_RIGHT_AHEAD, False)
         self.GPIO.output(Robot.MOVE_RIGHT_BACK, True)
 
