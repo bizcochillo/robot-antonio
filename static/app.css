@@ -2,10 +2,7 @@ body {
     overflow: hidden;
     padding: 0;
     margin: 0;
-    background-color: #BBB;
-}
-
-h1 {
+    background-color: rgb(236, 100, 230);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
